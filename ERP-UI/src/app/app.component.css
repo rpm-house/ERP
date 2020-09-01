@@ -1,0 +1,23 @@
+
+.container{
+  background-color: aliceblue;
+}
+.tile{
+  margin-left:auto;
+}
+.imgSize{
+    width:  100px;
+    height: 100px;
+    background-size: cover;
+ }
+.details{
+  padding-left: 65px;
+}
+
+.cart{
+  padding-left: 10px;
+    width: 45px;
+    height: 25px;
+    padding-bottom: 2px;
+}
+

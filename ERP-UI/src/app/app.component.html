@@ -1,0 +1,74 @@
+
+<div class="container">
+  <app-header></app-header>
+  <div class="row">
+
+
+<div *ngFor="let product of products" class="col-md-6">
+<input type="hidden" value="{{product.imageStr}}" #img />
+<table>
+  <td>
+<img [src]="transform(img.value)" class = "imgSize">
+<h4>{{product.productName}} </h4>
+</td>
+
+<td>
+    <div  class = "details">Price: {{product.price}} </div>
+    <p  class = "details"> Description: {{product.description}} </p>
+    <div class="details"> Quntity:
+   <span>
+    <select name="selectedQuantity" id = "quantity"  [(ngModel)]=product.id>
+    <option *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" [value]="i">{{i}}</option>
+  </select>
+
+  </span>
+<span>
+  <img [src]="imageSrc" [alt]="imageAlt" class = "cart" (click)="addToCart(product.id,product.productId,product.productName,product.price)"/>
+</span>
+</div>
+    </td>
+  </table>
+</div>
+
+</div>
+<app-footer></app-footer>
+</div>
+
+
+
+<div class="container">
+  <app-header></app-header>
+  <div class="row">
+
+
+<div *ngFor="let product of products" class="col-md-6">
+<input type="hidden" value="{{product.imageStr}}" #img />
+<table>
+  <td>
+<img [src]="transform(img.value)" class = "imgSize">
+<h4>{{product.productName}} </h4>
+</td>
+
+<td>
+    <div  class = "details">Price: {{product.price}} </div>
+    <p  class = "details"> Description: {{product.description}} </p>
+    <div class="details"> Quntity:
+   <span>
+    <select name="selectedQuantity" id = "quantity"  [(ngModel)]=product.id>
+    <option *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" [value]="i">{{i}}</option>
+  </select>
+
+  </span>
+<span>
+  <img [src]="imageSrc" [alt]="imageAlt" class = "cart" (click)="addToCart(product.id,product.productId,product.productName,product.price)"/>
+</span>
+</div>
+    </td>
+  </table>
+</div>
+
+</div>
+<app-footer></app-footer>
+</div>
+
+
